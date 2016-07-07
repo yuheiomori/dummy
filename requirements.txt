@@ -1,0 +1,4 @@
+Django==1.6.7
+wsgiref==0.1.2
+gunicorn==19.0.0
+meinheld==0.5.6
