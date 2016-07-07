@@ -98,3 +98,41 @@ STATICFILES_DIRS = (
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOG_DIR = '/var/log/sandbox'
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'formatters': {
+        "verbose": {
+            "format": "[in %(pathname)s:%(lineno)d] %(asctime)s %(levelname)s %(module)s %(process)d %(thread)d: %(message)s",
+            'datefmt': "%Y-%m-%d %H:%M:%S",
+        },
+    },
+    'handlers': {
+        'app': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(LOG_DIR, 'app.log'),
+            'maxBytes': 1024 * 1024 * 5,  # 5 MB
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['app'],
+            'level': 'DEBUG',
+            'propagate': True
+        },
+        'app': {
+            'handlers': ['app'],
+            'level': 'DEBUG',
+            'propagate': True
+        },
+    }
+}
