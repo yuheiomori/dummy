@@ -13,8 +13,10 @@ def namahage(request):
     return TemplateResponse(request, 'namahage.html', {})
 
 
-def ogp(request):
+def ogp(request, original_path):
+
     logger.debug('ogp access')
     logger.debug(request.META)
     logger.debug(request.GET)
+    logger.debug(original_path)
     return HttpResponse('<marquee>Hello hello hello how low</marquee>', {})
