@@ -19,4 +19,4 @@ def ogp(request, original_path):
     logger.debug(request.META)
     logger.debug(request.GET)
     logger.debug(original_path)
-    return HttpResponse('<marquee>Hello hello hello how low</marquee>', {})
+    return TemplateResponse(request, 'ogp.html', {})
