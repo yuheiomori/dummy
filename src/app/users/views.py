@@ -16,4 +16,5 @@ def namahage(request):
 def ogp(request):
     logger.debug('ogp access')
     logger.debug(request.META)
+    logger.debug(request.GET)
     return HttpResponse('<marquee>Hello hello hello how low</marquee>', {})
