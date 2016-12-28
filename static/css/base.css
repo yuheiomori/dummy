@@ -1,4 +1,9 @@
 body {
     color: whitesmoke;
-    background-color: cornflowerblue;
+    background-color: black;
+}
+
+
+img.namahage {
+  width: 100px;
 }
