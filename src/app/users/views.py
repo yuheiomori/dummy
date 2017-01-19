@@ -1,6 +1,8 @@
 from django.template.response import TemplateResponse, HttpResponse
 import logging
 
+from django.views.decorators.csrf import csrf_exempt
+
 logger = logging.getLogger(__name__)
 
 
@@ -22,6 +24,7 @@ def ogp(request, original_path):
     return TemplateResponse(request, 'ogp.html', {})
 
 
+@csrf_exempt
 def bounce(request):
     logger.debug('bounce')
     logger.debug(request.META)
@@ -31,6 +34,7 @@ def bounce(request):
     return TemplateResponse(request, 'bounce.html', {})
 
 
+@csrf_exempt
 def complaint(request):
     logger.debug('complaint')
     logger.debug(request.META)
