@@ -14,7 +14,7 @@ urlpatterns = [
     url(r"^ogp(?P<original_path>.*)$", ogp, name="ogp"),
     url(r"^namahage2/?$", namahage, name="namahage2"),
     url(r"^namahage3/?$", namahage, name="namahage3"),
-    url(r'^bouncy/', include('django_bouncy.urls')),
+    url(r'^bouncy/?$', include('django_bouncy.urls')),
     url(r'^static/(?P<path>.*)$', serve),
 
 ]
