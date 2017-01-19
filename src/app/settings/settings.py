@@ -104,10 +104,10 @@ TEMPLATES = [
         },
     },
 ]
-
-STATICFILES_DIRS = (
-    os.path.join(REPOSITORY_ROOT, 'static'),
-)
+# STATIC_ROOT = os.path.join(REPOSITORY_ROOT, 'static')
+# STATICFILES_DIRS = (
+#     os.path.join(REPOSITORY_ROOT, 'static'),
+# )
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
