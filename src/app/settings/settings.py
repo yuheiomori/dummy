@@ -136,3 +136,6 @@ LOGGING = {
         },
     }
 }
+
+BOUNCY_TOPIC_ARN = ['arn:aws:sns:us-west-2:748231602871:bounce-y0m0r1-link',
+                    'arn:aws:sns:us-west-2:748231602871:complaients-y0m0r1-link']
