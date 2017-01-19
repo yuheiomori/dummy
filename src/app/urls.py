@@ -9,6 +9,7 @@ from app.users.views import index, namahage, ogp
 admin.autodiscover()
 
 urlpatterns = [
+    url(r'^admin/', include(admin.site.urls)),
     url(r"^$", index, name="index"),
     url(r"^namahage/?$", namahage, name="namahage"),
     url(r"^ogp(?P<original_path>.*)$", ogp, name="ogp"),
