@@ -15,6 +15,6 @@ urlpatterns = [
     url(r"^namahage2/?$", namahage, name="namahage2"),
     url(r"^namahage3/?$", namahage, name="namahage3"),
     url(r'^bouncy/', include('django_bouncy.urls')),
-    url(r'^static/(?P<path>.*)$', serve        ),
+    url(r'^static/(?P<path>.*)$', serve),
 
 ]
