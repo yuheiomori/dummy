@@ -30,6 +30,7 @@ def bounce(request):
     logger.debug(request.META)
     logger.debug(request.GET)
     logger.debug(request.POST)
+    logger.debug(request.body)
 
     return TemplateResponse(request, 'bounce.html', {})
 
@@ -40,4 +41,5 @@ def complaint(request):
     logger.debug(request.META)
     logger.debug(request.GET)
     logger.debug(request.POST)
+    logger.debug(request.body)
     return TemplateResponse(request, 'complaint.html', {})
